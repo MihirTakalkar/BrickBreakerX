@@ -1,0 +1,9 @@
+c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\bin\Debug\MihirBrickBreaker.exe.config
+c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\bin\Debug\MihirBrickBreaker.exe
+c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\bin\Debug\MihirBrickBreaker.pdb
+c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.csprojResolveAssemblyReference.cache
+c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.Form1.resources
+c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.Properties.Resources.resources
+c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.csproj.GenerateResource.Cache
+c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.exe
+c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.pdb

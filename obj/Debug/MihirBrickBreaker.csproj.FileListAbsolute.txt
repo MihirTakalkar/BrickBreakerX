@@ -10,3 +10,9 @@ c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\o
 C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\bin\Debug\MihirBrickBreaker.exe.config
 C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.exe
 C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.pdb
+C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.csprojResolveAssemblyReference.cache
+C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.Form1.resources
+C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.Properties.Resources.resources
+C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.csproj.GenerateResource.Cache
+C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\bin\Debug\MihirBrickBreaker.exe
+C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\bin\Debug\MihirBrickBreaker.pdb

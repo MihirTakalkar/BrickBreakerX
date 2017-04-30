@@ -31,12 +31,18 @@ namespace MihirBrickBreaker
             hitbox = new Rectangle(x, y, width, height);
         }
 
-        public void Update()
+        public void Update(Size clientSize)
         {
             if (Left == true)
             {
                 MoveLeft();
             }
+
+            if(Right == true)
+            {
+                MoveRight(clientSize);
+            }
+
         }
 
 
@@ -48,9 +54,9 @@ namespace MihirBrickBreaker
             }
         }
 
-        public void MoveRight(Size clientSize) //pass in the width of the screen
+        public void MoveRight(Size clientSize) 
         {
-            if (x > clientSize.Width - width)
+            if (x < clientSize.Width - width)
             {
                 x += speedx;
             }

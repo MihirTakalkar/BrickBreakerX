@@ -7,3 +7,6 @@ c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\o
 c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.csproj.GenerateResource.Cache
 c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.exe
 c:\users\gmrinstructor\documents\visual studio 2015\Projects\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.pdb
+C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\bin\Debug\MihirBrickBreaker.exe.config
+C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.exe
+C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.pdb

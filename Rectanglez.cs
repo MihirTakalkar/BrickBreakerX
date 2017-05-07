@@ -15,7 +15,7 @@ namespace MihirBrickBreaker
         public int height;
         public int width;
         public int speedx;
-        Rectangle hitbox;
+        public Rectangle hitbox;
 
         public bool Left = false;
         public bool Right = false;
@@ -51,6 +51,7 @@ namespace MihirBrickBreaker
             if (x > 0)
             {
                 x -= speedx;
+                hitbox.X = x; 
             }
         }
 
@@ -59,12 +60,14 @@ namespace MihirBrickBreaker
             if (x < clientSize.Width - width)
             {
                 x += speedx;
+                hitbox.X = x;
             }
         }
 
         public void Draw(Graphics gfx)
         {
             gfx.FillRectangle(Brushes.Green, x, y, width, height);
+            gfx.DrawRectangle(Pens.Red, hitbox);
         }
 
 

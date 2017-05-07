@@ -28,7 +28,8 @@ namespace MihirBrickBreaker
             gfx = Graphics.FromImage(bitmap);
             paddle = new Rectanglez(228, ClientSize.Height - 15, 20, 150, 5);
             jo = new Ball(234, 150, 40, 40, 5, 5);
-            random = new Rectanglez(0, 0, 30, 50, 0);
+            random = new Rectanglez(1,1,20,80, 0);
+
         }
 
         //Location
@@ -41,16 +42,32 @@ namespace MihirBrickBreaker
         {
             //erase
             gfx.DrawImage(BackgroundImage, 0, 0, ClientSize.Width, ClientSize.Height);
-            gfx.DrawString(label2.Text, label2.Font, new SolidBrush(label2.ForeColor), label2.Location);
-            gfx.DrawString(label3.Text, label3.Font, new SolidBrush(label3.ForeColor), new Point(label3.Location.X, label3.Location.Y - 20));
+
+        
+            //Update
             paddle.Update(ClientSize);
             jo.Update(ClientSize);
             random.Update(ClientSize);
 
+            //if paddle hitbox intersects ball hitbox
+            if (paddle.hitbox.IntersectsWith(jo.hitbox))
+            {
+                //bounce ball so it goes up
+               jo.speedy = -Math.Abs(jo.speedy);
+            }
+            if (random.hitbox.IntersectsWith(jo.hitbox))
+            {
+                
+            }
+            //Drawing
+            random.Draw(gfx);
             //Paddle
             paddle.Draw(gfx);
             jo.Draw(gfx);
-            random.Draw(gfx);
+
+            //label
+            gfx.DrawString(label2.Text, label2.Font, new SolidBrush(label2.ForeColor), label2.Location);
+            gfx.DrawString(label3.Text, label3.Font, new SolidBrush(label3.ForeColor), new Point(label3.Location.X, label3.Location.Y - 20));
 
             canvas.Image = bitmap;
         }

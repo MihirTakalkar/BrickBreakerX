@@ -16,3 +16,4 @@ C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\obj\Debug\MihirBrickBr
 C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.csproj.GenerateResource.Cache
 C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\bin\Debug\MihirBrickBreaker.exe
 C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\bin\Debug\MihirBrickBreaker.pdb
+C:\Users\GMRInstructor\Documents\GitHub\MihirBrickBreaker\obj\Debug\MihirBrickBreaker.StartScreen.resources

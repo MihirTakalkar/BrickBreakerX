@@ -17,10 +17,16 @@ namespace MihirBrickBreaker
             InitializeComponent();
         }
 
+        //title page
+        //lose life and lose page
+        //destory all -> bricks win page
+
         Graphics gfx;
         Rectanglez paddle;
         Ball jo;
-        Rectanglez random;
+
+        List<Rectanglez> bricks;
+
         Bitmap bitmap;
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -28,8 +34,22 @@ namespace MihirBrickBreaker
             gfx = Graphics.FromImage(bitmap);
             paddle = new Rectanglez(228, ClientSize.Height - 15, 20, 150, 5);
             jo = new Ball(234, 150, 40, 40, 5, 5);
-            random = new Rectanglez(1,1,20,80, 0);
 
+            bricks = new List<Rectanglez>();
+
+            int dy = 0;
+            for (int j = 0; j < 3; j++)
+            {
+
+                int dx = 0;
+                for (int i = 0; i < 8; i++)
+                {
+                    bricks.Add(new Rectanglez(1 + dx, 1 + dy, 20, 80, 0));
+                    dx += 80 + 6;
+                }
+
+                dy += 20 + 6;
+            }
         }
 
         //Location
@@ -43,24 +63,38 @@ namespace MihirBrickBreaker
             //erase
             gfx.DrawImage(BackgroundImage, 0, 0, ClientSize.Width, ClientSize.Height);
 
-        
+
             //Update
             paddle.Update(ClientSize);
             jo.Update(ClientSize);
-            random.Update(ClientSize);
 
+            for (int i = 0; i < bricks.Count; i++)
+            {
+                bricks[i].Update(ClientSize);
+            }
             //if paddle hitbox intersects ball hitbox
             if (paddle.hitbox.IntersectsWith(jo.hitbox))
             {
                 //bounce ball so it goes up
-               jo.speedy = -Math.Abs(jo.speedy);
+                jo.speedy = -Math.Abs(jo.speedy);
             }
-            if (random.hitbox.IntersectsWith(jo.hitbox))
+
+            //for
+            for (int x = 0; x < bricks.Count; x++)
             {
-                
+                if (bricks[x].hitbox.IntersectsWith(jo.hitbox))
+                {
+                    bricks.RemoveAt(x);
+                    jo.speedy *= -1;
+                    break;
+                }
             }
             //Drawing
-            random.Draw(gfx);
+            //for
+            for (int f = 0; f < bricks.Count; f++)
+            {
+                bricks[f].Draw(gfx);
+            }
             //Paddle
             paddle.Draw(gfx);
             jo.Draw(gfx);

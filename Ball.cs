@@ -50,11 +50,11 @@ namespace MihirBrickBreaker
 
             if(y < 0)
             {
-                speedy *= -1;
+                speedy = Math.Abs(speedy);
             }
             if(y + height > Clientsize.Height)
             {
-                speedy *= -1;
+                speedy = -Math.Abs(speedy);
             }
 
         }

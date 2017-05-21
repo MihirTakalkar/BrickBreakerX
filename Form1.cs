@@ -32,17 +32,17 @@ namespace MihirBrickBreaker
         {
             bitmap = new Bitmap(canvas.Width, canvas.Height);
             gfx = Graphics.FromImage(bitmap);
-            paddle = new Rectanglez(228, ClientSize.Height - 15, 20, 150, 5);
-            jo = new Ball(234, 150, 40, 40, 5, 5);
+            paddle = new Rectanglez(228, ClientSize.Height - 15, 20, 150, 7);
+            jo = new Ball(234, 250, 40, 40, 5, 5);
 
             bricks = new List<Rectanglez>();
 
-            int dy = 0;
-            for (int j = 0; j < 3; j++)
+            int dy = 100;
+            for (int j = 0; j < 6; j++)
             {
 
                 int dx = 0;
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < 11; i++)
                 {
                     bricks.Add(new Rectanglez(1 + dx, 1 + dy, 20, 80, 0));
                     dx += 80 + 6;
@@ -72,11 +72,17 @@ namespace MihirBrickBreaker
             {
                 bricks[i].Update(ClientSize);
             }
+
             //if paddle hitbox intersects ball hitbox
             if (paddle.hitbox.IntersectsWith(jo.hitbox))
             {
                 //bounce ball so it goes up
                 jo.speedy = -Math.Abs(jo.speedy);
+
+                 if (paddle.x + (paddle.width / 2) > jo.x)
+                 {
+                   jo.speedx = 0;
+                 }
             }
 
             //for
@@ -134,3 +140,5 @@ namespace MihirBrickBreaker
 
     }
 }
+
+// The middle of the paddle will be if (paddle.x + (paddle.Width/2)), set ball.speedx = 0

@@ -67,7 +67,7 @@ namespace MihirBrickBreaker
         public void Draw(Graphics gfx)
         {
             gfx.FillRectangle(Brushes.Green, x, y, width, height);
-            gfx.DrawRectangle(Pens.Red, hitbox);
+            gfx.DrawRectangle(Pens.Blue, hitbox);
         }
 
 

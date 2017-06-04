@@ -63,7 +63,7 @@ namespace MihirBrickBreaker
             //erase
             gfx.DrawImage(BackgroundImage, 0, 0, ClientSize.Width, ClientSize.Height);
 
-
+            label1.Text = jo.hitground.ToString();
             //Update
             paddle.Update(ClientSize);
             jo.Update(ClientSize);
@@ -79,10 +79,6 @@ namespace MihirBrickBreaker
                 //bounce ball so it goes up
                 jo.speedy = -Math.Abs(jo.speedy);
 
-                 if (paddle.x + (paddle.width / 2) > jo.x)
-                 {
-                   jo.speedx = 0;
-                 }
             }
 
             //for
@@ -135,9 +131,9 @@ namespace MihirBrickBreaker
             {
                 paddle.Right = false;
             }
+            
         }
-
-
+       
     }
 }
 

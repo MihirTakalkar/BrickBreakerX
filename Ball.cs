@@ -15,12 +15,17 @@ namespace MihirBrickBreaker
         public int height;
         public int speedx;
         public int speedy;
+        public int originalx;
+        public int originaly;
+        public int hitground = 0;
         public Rectangle hitbox;
 
         public Ball(int x, int y, int width, int height, int speedx, int speedy)
         {
             this.x = x;
             this.y = y;
+            this.originalx = x;
+            this.originaly = y;
             this.width = width;
             this.height = height;
             this.speedx = speedx;
@@ -54,7 +59,11 @@ namespace MihirBrickBreaker
             }
             if(y + height > Clientsize.Height)
             {
-                speedy = -Math.Abs(speedy);
+                x = originalx;
+                y = originaly;
+                speedx = Math.Abs(speedx);
+                speedy = Math.Abs(speedy);
+                hitground++;
             }
 
         }

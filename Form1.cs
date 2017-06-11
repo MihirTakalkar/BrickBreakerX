@@ -32,24 +32,11 @@ namespace MihirBrickBreaker
         {
             bitmap = new Bitmap(canvas.Width, canvas.Height);
             gfx = Graphics.FromImage(bitmap);
-            paddle = new Rectanglez(228, ClientSize.Height - 15, 20, 150, 7);
-            jo = new Ball(234, 250, 40, 40, 5, 5);
+            paddle = new Rectanglez(228, ClientSize.Height - 15, 20, 150, 13);
+            jo = new Ball(234, 250, 40, 40, 9, 9);
 
             bricks = new List<Rectanglez>();
-
-            int dy = 100;
-            for (int j = 0; j < 6; j++)
-            {
-
-                int dx = 0;
-                for (int i = 0; i < 11; i++)
-                {
-                    bricks.Add(new Rectanglez(1 + dx, 1 + dy, 20, 80, 0));
-                    dx += 80 + 6;
-                }
-
-                dy += 20 + 6;
-            }
+            BrickReset();
         }
 
         //Location
@@ -97,6 +84,14 @@ namespace MihirBrickBreaker
             {
                 bricks[f].Draw(gfx);
             }
+
+            if (bricks.Count == 0)
+            {
+                timer.Stop();
+                MessageBox.Show(string.Format(" Your lost {0} times", jo.hitground));
+                BrickReset();
+                timer.Start();
+            }
             //Paddle
             paddle.Draw(gfx);
             jo.Draw(gfx);
@@ -125,6 +120,7 @@ namespace MihirBrickBreaker
             if (e.KeyCode == Keys.Left)
             {
                 paddle.Left = false;
+            
             }
 
             if (e.KeyCode == Keys.Right)
@@ -133,8 +129,24 @@ namespace MihirBrickBreaker
             }
             
         }
-       
+       private void BrickReset()
+        {
+            bricks.Clear();
+            int dy = 100;
+            for (int j = 0; j < 6; j++)
+            {
+
+                int dx = 0;
+                for (int i = 0; i < 11; i++)
+                {
+                    bricks.Add(new Rectanglez(1 + dx, 1 + dy, 20, 80, 0));
+                    dx += 80 + 6;
+                }
+
+                dy += 20 + 6;
+            }
+        } 
     }
 }
 
-// The middle of the paddle will be if (paddle.x + (paddle.Width/2)), set ball.speedx = 0
+// The middle of the paddle will be if (paddle.x + (paddle.Width/2)), set ball.speedx = 0 sssssssssssggggggggggggggg
